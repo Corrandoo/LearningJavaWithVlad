@@ -9,6 +9,7 @@ public class Horse {
     public Horse(String name) {
         this.name = name;
         this.distance = 0;
+        this.speed = 1;
     }
 
 
@@ -39,6 +40,9 @@ public class Horse {
         setDistance(getDistance() + getSpeed());
     }
     public void print(){
-
+        for (int i = 0; i < (int)getDistance(); i++) {
+            System.out.print(".");
+        }
+        System.out.println(getName());
     }
 }

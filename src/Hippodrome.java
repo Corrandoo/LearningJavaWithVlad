@@ -26,7 +26,7 @@ public class Hippodrome {
     public void run(){
         for (int i = 0; i < 100; i++) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
             }
             move();
