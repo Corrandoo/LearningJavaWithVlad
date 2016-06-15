@@ -8,10 +8,12 @@ public class Horse {
 
     public Horse(String name) {
         this.name = name;
+        this.distance = 0;
     }
 
+
     public double getSpeed() {
-        return speed;
+        return speed * Math.random();
     }
 
     public String getName() {
@@ -34,7 +36,7 @@ public class Horse {
         this.distance = distance;
     }
     public void move(){
-
+        setDistance(getDistance() + getSpeed());
     }
     public void print(){
 

@@ -20,10 +20,10 @@ public class Hippodrome {
         horses.add(new Horse("Рыжун"));
         horses.add(new Horse("Плотва"));
         horses.add(new Horse("Владик"));
-        run();
+        game.run();
     }
 
-    public static void run(){
+    public void run(){
         for (int i = 0; i < 100; i++) {
             try {
                 Thread.sleep(1000);
@@ -33,12 +33,12 @@ public class Hippodrome {
             print();
         }
     }
-    public static void move(){
+    public void move(){
         for (int i = 0; i < horses.size(); i++) {
             horses.get(i).move();
         }
     }
-    public static void print(){
+    public void print(){
         for (int i = 0; i < horses.size(); i++) {
             horses.get(i).print();
             System.out.println();
