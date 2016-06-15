@@ -33,6 +33,7 @@ public class Horse {
         this.name = name;
     }
 
+
     public void setDistance(double distance) {
         this.distance = distance;
     }

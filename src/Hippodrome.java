@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Created by user on 15.06.2016.
@@ -21,6 +23,9 @@ public class Hippodrome {
         horses.add(new Horse("Плотва"));
         horses.add(new Horse("Владик"));
         game.run();
+        game.getWinners();
+        game.printWinners();
+
     }
 
     public void run(){
@@ -43,6 +48,21 @@ public class Hippodrome {
             horses.get(i).print();
             System.out.println();
             System.out.println();
+        }
+    }
+    public ArrayList<Horse> getWinners(){
+        Collections.sort(getHorses(), new Comparator<Horse>() {
+            @Override
+            public int compare(Horse o1, Horse o2) {
+                return (int) o2.getDistance() - (int) o1.getDistance();
+            }
+        });
+
+        return getHorses();
+    }
+    public void printWinners(){
+        for (int i = 0; i < getHorses().size(); i++){
+            System.out.println("Место " + (i+1) + ": " + getHorses().get(i).getName() + ".");
         }
     }
 
